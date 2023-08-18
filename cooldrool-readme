@@ -1,0 +1,36 @@
+# pythonprogject
+
+This code reads movie ratings from a file and determines whether a movie is considered "COOL," "DROOL," or "Too soon to rule" based on the ratings data. It then uses the `graphics` library to create a graphical window displaying the movie's title, a rating image, and the cool percentage.
+
+Here's a step-by-step breakdown of the code:
+
+1. User Input and File Opening:
+   - The code prompts the user to input the name of a ratings file.
+   - It enters a loop that attempts to open the specified file for reading. If the file is not found, it prints an error message and continues the loop until a valid file is provided.
+
+2. Reading Movie Title:
+   - The first line of the file is read, split into tokens using commas, and the movie title is extracted from the second token (`firstLineTokens[1]`).
+
+3. Counting Ratings:
+   - The code initializes variables `totalRatings` and `totalRatingsAboveCool` to keep track of the total number of ratings and the number of ratings above or equal to 6 (considered "COOL").
+   - It iterates through each line in the file and splits the ratings into separate tokens.
+   - For each rating, it converts the rating to an integer and updates the counters accordingly.
+
+4. Calculating Cool Percentage:
+   - The cool percentage (`coolPct`) is calculated by dividing the total ratings above or equal to 6 by the total number of ratings.
+
+5. Determining Rating Category:
+   - Based on the cool percentage and the total number of ratings, the code determines whether the movie is "Too soon to rule," "COOL," or "DROOL."
+   - It sets the `rating` and `ratingImageFileName` accordingly.
+
+6. Displaying Graphics:
+   - The code uses the `graphics` library to create a graphical window (`win`) with a specified size.
+   - Text objects are created for the movie title, cool percentage, and rating using `Text` class.
+   - An image object is created for the rating image using `Image` class.
+   - The title text and rating image are drawn on the window using the `draw()` method.
+
+7. Output:
+   - The code displays the movie title, cool percentage, and rating image in the graphical window.
+   - The console prints the movie title, total number of ratings, cool percentage, and rating category.
+
+Overall, this code demonstrates file input, data processing, and graphical visualization using the `graphics` library. It presents a simple rating system for movies and displays the result in a graphical interface.
